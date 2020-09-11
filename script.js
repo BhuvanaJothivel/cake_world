@@ -7,7 +7,7 @@ var layer5  = document.getElementById('layer5');
 var candle  = document.getElementById('candle');
 var total = 0;
 
-function addChocolate(){
+document.getElementById("Chocolatebtn").onclick = function(){
     document.getElementById('chocolateBill').innerHTML = 'Chocolate ----------- 300';
     layer++;
     total += 300;
@@ -39,7 +39,7 @@ function addChocolate(){
     }
 }
 
-function addStrawberry(){
+document.getElementById("Strawberrybtn").onclick = function(){
     document.getElementById('strawberryBill').innerHTML = 'Strawberry -------- 100';
     layer++;
     total += 100;
@@ -71,7 +71,7 @@ function addStrawberry(){
     }
 }
 
-function addButterscotch(){
+document.getElementById("Butterscotchbtn").onclick = function(){
     document.getElementById('butterscotchBill').innerHTML = 'Butterscotch ----- 200';
     layer++;
     total += 200;
@@ -103,7 +103,7 @@ function addButterscotch(){
     }
 }
 
-function addVannila(){
+document.getElementById("Vannilabtn").onclick = function(){
     document.getElementById('vannilaBill').innerHTML = 'Vannila ---------------- 250';
     layer++;
     total += 250;
@@ -135,7 +135,7 @@ function addVannila(){
     }
 }
 
-function addRedvelvet(){
+document.getElementById("Redvelvetbtn").onclick = function(){
     document.getElementById('redvelvetBill').innerHTML = 'Redvelvet ----------- 350';
     layer++;
     total += 350;
@@ -167,8 +167,113 @@ function addRedvelvet(){
     }
 }
 
-function buy(){
+document.getElementById("buy").onclick = function(){
     if(layer>=5)
         candle.style.visibility = 'visible';
     document.getElementById('total').innerHTML = 'Total ----------- '+total;
 }
+
+
+// var state = {
+//     chocolate: true,
+//     strawberry: true,
+//     butterscotch: true,
+//     vannila: true,
+//     redvelvet: true
+// };
+
+// function addAll() {
+//     addChocolate();
+//     addStrawberry();
+//     addButterscotch();
+//     addVannila();
+//     addRedvelvet();
+//     // renderButtons();
+//     // renderIngredientsBoard();
+//     // renderPrice();
+// }
+
+// function addChocolate() {
+//     let $chocolate = document.querySelector("#layer1");
+//     //you can also use getElementById
+//     if (state.chocolate) {
+//         $chocolate.style.visibility = "visible";
+//     } else {
+//         $chocolate.style.visibility = "hidden";
+//     }
+// }
+
+// function addStrawberry() {
+//     //Trial 1 - Change the visibility of cheese based on state by manipulating the DOM
+//     let $strawberry = document.querySelector("#layer2");
+//     //you can also use getElementById
+//     if (state.strawberry) {
+//         $strawberry.style.visibility = "visible";
+//     } else {
+//         $strawberry.style.visibility = "hidden";
+//     }
+// }
+
+
+// function addButterscotch() {
+//     //Trial 1 - Change the visibility of Tomatoes based on state by manipulating the DOM
+//     let $butterscotch = document.querySelector("#layer3");
+//     //you can also use getElementById
+//     if (state.butterscotch) {
+//         $butterscotch.style.visibility = "visible";
+//     } else {
+//         $butterscotch.style.visibility = "hidden";
+//     }
+// }
+
+
+// function addVannila() {
+//     //Trial 1 - Change the visibility of Onions based on state by manipulating the DOM
+//     let $vannila = document.querySelector("#layer4");
+//     //you can also use getElementById
+//     if (state.vannila) {
+//         $vannila.style.visibility = "visible";
+//     } else {
+//         $vannila.style.visibility = "hidden";
+//     }
+// }
+
+// function addRedvelvet() {
+//     //Trial 1 - Change the visibility of Lettuce based on state by manipulating the DOM
+//     let $redvelvet = document.querySelector("#layer5");
+//     //you can also use getElementById
+//     if (state.redvelvet) {
+//         $redvelvet.style.visibility = "visible";
+//     } else {
+//         $redvelvet.style.visibility = "hidden";
+//     }
+// }
+
+// document.querySelector("#Chocolatebtn").onclick = function() {
+//     state.chocolate = !state.chocolate;
+//     addAll();
+// };
+
+// // Trial 2 - Setup event listener for the cheese button
+// document.querySelector("#Strawberrybtn").onclick = function() {
+//     state.strawberry = !state.strawberry;
+//     addAll();
+// };
+
+// // Trial 2 - Setup event listener for the tomatoes button
+// document.querySelector("#Butterscotchbtn").onclick = function() {
+//     state.butterscotch = !state.butterscotch;
+//     addAll();
+// };
+
+// // Trial 2 - Setup event listener for the onion button
+// document.querySelector("#Vannilabtn").onclick = function() {
+//     state.vannila = !state.vannila;
+//     addAll();
+// };
+
+// // Trial 2 - Setup event listener for the lettuce button
+// document.querySelector("#Redvelvetbtn").onclick = function() {
+//     state.redvelvet = !state.redvelvet;
+//     addAll();
+// };
